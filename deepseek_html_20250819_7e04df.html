@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Construcción de Software</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #2ecc71;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--secondary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--secondary);
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light);
+        }
+        
+        h3 {
+            color: var(--primary);
+            margin: 20px 0 10px;
+        }
+        
+        .intro {
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-title {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-title i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .definition {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .phase-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .phase {
+            flex: 1;
+            min-width: 200px;
+            background: var(--light);
+            padding: 15px;
+            border-radius: 6px;
+            position: relative;
+        }
+        
+        .phase::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary);
+        }
+        
+        .best-practices {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .practice {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .practice::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .role {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .role h4 {
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--light);
+            color: #777;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phase, .role {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Construcción de Software</h1>
+            <p class="intro">Infografía sobre los principios, fases y mejores prácticas en el desarrollo de software</p>
+        </header>
+        
+        <section>
+            <h2>¿Qué es el Software?</h2>
+            <div class="definition">
+                <p>El software es un conjunto de programas, instrucciones y reglas informáticas para ejecutar ciertas tareas en una computadora. Incluye procedimientos, reglas, documentación y datos asociados que forman parte de las operaciones de un sistema de computación.</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Ingeniería del Software</h2>
+            <p>La Ingeniería del Software se define como la aplicación práctica del conocimiento científico en el diseño y construcción de programas de computadora y la documentación asociada requerida para su desarrollo, operación y mantenimiento.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Propósito</h3>
+                        <p>Establecer principios y métodos de ingeniería para obtener software de manera rentable, que sea fiable y que opere en máquinas reales.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Enfoque</h3>
+                        <p>También conocida como "desarrollo de software" o "producción de software", busca aplicar metodologías sistemáticas para la creación de productos software de calidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Fase de Construcción en el Ciclo de Vida</h2>
+            <div class="phase-container">
+                <div class="phase">
+                    <h3>Diseño</h3>
+                    <p>Transformación de requisitos en especificaciones de diseño que servirán como base para la codificación.</p>
+                </div>
+                
+                <div class="phase">
+                    <h3>Codificación</h3>
+                    <p>Los desarrolladores escriben el código según las especificaciones del diseño, utilizando lenguajes y herramientas seleccionadas.</p>
+                </div>
+                
+                <div class="phase">
+                    <h3>Pruebas</h3>
+                    <p>Verificación de que el software funciona correctamente y cumple con los requisitos establecidos.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Buenas Prácticas de Programación</h2>
+            <div class="best-practices">
+                <div class="practice">Utilizar nombres con sentido, precisos y descriptivos para variables, funciones, parámetros, clases y métodos.</div>
+                <div class="practice">Crear funciones reducidas (idealmente no más de 20 líneas) que sigan el "principio de responsabilidad única".</div>
+                <div class="practice">Reducir el número de argumentos en funciones (idealmente menos de tres).</div>
+                <div class="practice">Evitar la duplicación de código (principio DRY).</div>
+                <div class="practice">Usar comentarios solo cuando el código no puede explicarse por sí mismo.</div>
+                <div class="practice">Mantener un formato consistente en los archivos de código.</div>
+                <div class="practice">Manejar los errores adecuadamente, separando la lógica de manejo de errores del negocio.</div>
+                <div class="practice">Mantener un único propósito para cada clase (principio de responsabilidad única).</div>
+                <div class="practice">Asegurar que las clases estén abiertas a la extensión pero cerradas a la modificación (principio abierto/cerrado).</div>
+                <div class="practice">Buscar bajo acoplamiento (poco conocimiento entre clases) y alta cohesión (independencia interna de la clase).</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Roles en la Construcción de Software</h2>
+            <div class="roles">
+                <div class="role">
+                    <h4>Desarrolladores de Software</h4>
+                    <p>Crean el proyecto final mediante la programación en diversos lenguajes. Trabajan según su experiencia y especialización (front-end, back-end, full-stack).</p>
+                </div>
+                
+                <div class="role">
+                    <h4>Ingenieros de Software</h4>
+                    <p>Aplican principios de ingeniería para crear software y sistemas que resuelvan problemas de manera general, considerando aspectos técnicos y de gestión.</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Infografía basada en el documento "La.pdf" sobre construcción de software</p>
+        </footer>
+    </div>
+</body>
+</html>
